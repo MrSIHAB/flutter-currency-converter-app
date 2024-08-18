@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_corrency_converter/pages/corrency_converter_cupertino_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -98,6 +99,14 @@ class _CorrencyConverterMaterialState extends State {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: TextButton(
+        style: TextButton.styleFrom(backgroundColor: Colors.blue.shade200),
+        onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => const CorrencyConverterCupertino()));
+        },
+        child: const Text('See Cupertino Design'),
       ),
     );
   }
